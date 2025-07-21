@@ -1,0 +1,22 @@
+
+body{
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: auto;
+color: antiquewhite;
+background-image: url('assets/desert.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+
+.wipseal {
+  display: block;
+  margin-left: auto;
+  margin-right: 50%;
+  margin-top: 35%;
+  width:10%;
+  height: 10%;
+}
