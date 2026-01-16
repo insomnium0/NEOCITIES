@@ -1,22 +1,139 @@
 
 body{
-display: block;
-margin-left: auto;
-margin-right: auto;
-color: black;
-background-image: url('assets/arctic.jpg');
+color: rgb(255, 255, 255);
+background-image: url('assets/greenflythroughspace.gif'); 
+background-color: rgba(0, 0, 0, 0.86);
 background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
+display: flex;
+position: relative;
+}
+.full-image {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  z-index: -1;            
+  pointer-events: none;
 }
 
-.wipseal {
+.navbar{
+  position: sticky;
+  top:0;
+  margin: 0%;
+}
+.navbar ul{
+  display: flex;
+  height: 10vh;
+  list-style-type: none;
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+  height: 30px;
+  flex-direction:row;
+}
+.navbar a{
+  color:white;
+  text-decoration: none;
+  padding: 5px;
+  background-color: rgb(85, 72, 57);
+  border-radius: 30px;
   display: block;
-  margin-left: auto;
-  margin-right: 40%;
-  margin-top: 28%;
-  width:10%;
-  height: 10%;
+  text-align: center;
+}
+.navbar li{
+  float:right;
+}
+.navbar a:hover{
+  background-color: blueviolet;
+}
+.allcontent{
+  display: flex;
+  background-color: rgba(255, 142, 142, 0);
+  position: absolute;
+  justify-content: space-between;
+  align-items: stretch;
+  height:65vh;
+
+}
+#contentmiddle{
+  background-color: rgba(255, 228, 196, 0);
+  position: relative;
+  padding: 90px;
+  flex:2;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid red;
 }
 
+
+#contentleft{
+  display:inline-block;
+  background-color: rgba(193, 193, 39, 0);
+  position: relative;
+  padding: 60px;
+  width:25%;
+  outline: 2px solid green;
+}
+#contentright{
+  display:inline-block;
+  background-color: rgba(41, 197, 51, 0);
+  position: relative;
+  padding: 60px;
+  width:25%;
+  outline: 2px solid white;
+}
+.wipseal {
+  position: absolute;
+  top: 870px;
+  left:300px;
+}
+.dashboard{
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-style: inset;
+  border-radius: 3px;
+  border-color: rgb(34, 255, 0);
+  border-width: 5px;
+  padding:20px;
+  margin:0px;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 500px;
+  text-shadow: 10px;
+background-color: rgba(0, 0, 0, 0.712);
+  background-size: contain;
+  overflow-y: auto;
+}
+#contentmiddle.active .dashboard{
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+div h1{
+  margin:5px;
+  padding:10px;
+}
+.hudbutton{
+    position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 12px 24px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  color: lime;
+  border: 2px solid lime;
+  cursor: pointer;
+}
